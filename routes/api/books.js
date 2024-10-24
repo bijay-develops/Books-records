@@ -14,7 +14,7 @@ router.get('/test', (req, res) => res.send('book route testing!'));
 // @desc    Get all books 
 // @access  public 
 router.get('/', (req, res) => {
-    book.find() 
+    Book.find() 
             .then(books => res.json(books))
             .catch(err => res.status(404).json({ nobooksfound: 'No Books found'}));
 });
